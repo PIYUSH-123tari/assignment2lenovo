@@ -1,0 +1,246 @@
+/* ...existing code... */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(270deg, #f8ffae, #43c6ac, #191654);
+    background-size: 600% 600%;
+    animation: bgAnimation 16s ease infinite;
+}
+
+@keyframes bgAnimation {
+    0% {background-position:0% 50%;}
+    50% {background-position:100% 50%;}
+    100% {background-position:0% 50%;}
+}
+
+.container {
+    max-width: 900px;
+     margin: 30px auto; /*by writing auto it maintains equalspace in x-axis  */
+    background: rgba(255,255,255,0.95);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+#head1 {
+    color: #191654;
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.nav-conatiner {
+    margin-bottom: 20px;
+}
+
+#navlink {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+#navlink li a {
+    text-decoration: none;
+    color: #43c6ac;
+    font-weight: bold;
+     transition: color 0.3s; /* transition applied here to change color from green to black */
+}
+
+#navlink li a:hover {
+    color: #191654;
+}
+
+#navlink img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.sec-container {
+    margin-bottom: 30px;
+}
+
+#head-loc, #head-info {
+    color: #43c6ac;
+    margin-top: 20px;
+}
+.loc{
+ display: flex;
+ flex-direction: column;
+}
+.loc p{
+    text-align: center;
+}
+
+.img-conatiner {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.img-class {
+    width: 120px;
+    height: 80px;
+    object-fit: cover; 
+    /* to used to basically crop the image so that it could fitted into particular size */
+    border-radius: 8px;
+    border: 2px solid #43c6ac;
+    transition: transform 0.2s;
+}
+
+.img-class:hover {
+    transform: scale(1.08);
+    border-color: #191654;
+}
+
+.personal-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 350px;
+    margin: 0 auto 20px ;
+}
+
+.personal-info label {
+    font-weight: bold;
+    color: #191654;
+}
+
+.personal-info input {
+    padding: 6px 10px;
+    border: 1px solid #43c6ac;
+    border-radius: 4px;
+    
+}
+#btn{
+    height:1.4rem;
+    width:5rem;
+    border-radius: 5px;
+    font-weight: 700;
+    text-align: center;
+}
+.details {
+    background: #f8ffae;
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 20px;
+    
+}
+
+.details h3 {
+    color: #191654;
+    margin-bottom: 10px;
+}
+
+.details ul {
+    margin: 0 0 10px 20px;
+    color: #191654;
+}
+
+footer {
+    background: #43c6ac;
+    color: #fff;
+    text-align: center;
+    padding: 18px 0 10px 0;
+    border-radius: 0 0 12px 12px;
+    margin-top: 30px;
+}
+
+.footer-content a {
+    color: #191654;
+    text-decoration: none;
+    margin: 0 6px;
+    font-weight: bold;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+/* media queries */
+
+/* Desktop styles (default, min-width: 900px) */
+@media (min-width: 900px) {
+    .container {
+        max-width: 900px;
+        padding: 24px 48px;
+    }
+    .img-conatiner {
+        flex-direction: row;
+    }
+    .personal-info {
+        max-width: 350px;
+    }
+}
+
+/* Tablet styles */
+@media (max-width: 899px) and (min-width: 601px) {
+    .container {
+        max-width: 95vw;
+        padding: 16px;
+    }
+    .img-conatiner {
+        flex-direction: row;
+        gap: 12px;
+    }
+    .personal-info {
+        max-width: 90vw;
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+    .container {
+        max-width: 100vw;
+        padding: 8px;
+    }
+    header {
+        margin-bottom: 10px;
+    }
+    #head1 {
+        font-size: 1.3rem;
+    }
+    .nav-conatiner {
+        margin-bottom: 10px;
+    }
+    #navlink {
+        flex-direction: column;
+        gap: 10px;
+    }
+    #navlink img {
+        width: 36px;
+        height: 36px;
+    }
+    .img-conatiner {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    .img-class {
+        width: 90vw;
+        max-width: 250px;
+        height: auto;
+    }
+    .personal-info {
+        max-width: 98vw;
+        padding: 0 2vw;
+    }
+    .details {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+    footer {
+        font-size: 0.95rem;
+        padding: 10px 0 6px 0;
+    }
+}
+
